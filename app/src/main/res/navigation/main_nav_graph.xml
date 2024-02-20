@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/departmentsFragment">
+
+    <fragment
+        android:id="@+id/departmentsFragment"
+        android:name="com.hazel.lms.ui.department.list.DepartmentsFragment"
+        android:label="fragment_departments"
+        tools:layout="@layout/fragment_departments">
+        <action
+            android:id="@+id/action_departmentsFragment_to_addEditDepartmentFragment"
+            app:destination="@id/addEditDepartmentFragment" />
+        <action
+            android:id="@+id/action_departmentsFragment_to_studentsFragment"
+            app:destination="@id/studentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditDepartmentFragment"
+        android:name="com.hazel.lms.ui.department.add_edit.AddEditDepartmentFragment"
+        android:label="fragment_add_edit_department"
+        tools:layout="@layout/fragment_add_edit_department" />
+    <fragment
+        android:id="@+id/studentsFragment"
+        android:name="com.hazel.lms.ui.students.list.StudentsFragment"
+        android:label="fragment_students"
+        tools:layout="@layout/fragment_students" >
+        <action
+            android:id="@+id/action_studentsFragment_to_addEditStudentFragment"
+            app:destination="@id/addEditStudentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEditStudentFragment"
+        android:name="com.hazel.lms.ui.students.add_edit.AddEditStudentFragment"
+        android:label="fragment_add_edit_student"
+        tools:layout="@layout/fragment_add_edit_student" />
+</navigation>
